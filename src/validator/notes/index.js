@@ -1,4 +1,4 @@
-const { InvariantError } = require("../../exceptions/ErrorController");
+const { InvariantError } = require("../../exceptions");
 const { NotePayloadSchema } = require("./schema");
 
 const NotesValidator = {

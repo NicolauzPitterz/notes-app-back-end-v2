@@ -1,8 +1,5 @@
 const { nanoid } = require("nanoid");
-const {
-  InvariantError,
-  NotFoundError,
-} = require("../../exceptions/ErrorController");
+const { InvariantError, NotFoundError } = require("../../exceptions");
 
 class NotesService {
   constructor() {
@@ -39,7 +36,7 @@ class NotesService {
   }
 
   getNoteById(id) {
-    const note = this._notes.filter((note) => note.id === id)[0];
+    const note = this._notes.filter((n) => n.id === id)[0];
 
     if (!note) {
       throw new NotFoundError("Catatan tidak ditemukan");

@@ -1,16 +1,36 @@
 {
     "env": {
+        "browser": true,
+        "commonjs": true,
         "es2021": true,
         "node": true
     },
     "extends": [
         "airbnb-base",
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
         "prettier"
     ],
+    "overrides": [],
     "parserOptions": {
-        "ecmaVersion": 2020
+        "ecmaVersion": "latest"
     },
     "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "no-underscore-dangle": "off",
         "no-console": "off"
     }
 }
